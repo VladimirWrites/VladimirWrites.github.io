@@ -21,7 +21,7 @@ My name is Vladimir Jovanović. I am an experianced and passionate Android Devel
         <td> 
         </td> 
         <td> 
-            Pluralsight
+            <a href="https://www.pluralsight.com">Pluralsight, Inc.</a>
         </td> 
     </tr> 
     <tr> 
@@ -40,7 +40,7 @@ My name is Vladimir Jovanović. I am an experianced and passionate Android Devel
         <td> 
         </td> 
         <td> 
-            FlixBus GmbH
+            <a href="https://www.flixbus.com">FlixBus GmbH</a>
         </td> 
     </tr> 
     <tr> 
@@ -59,7 +59,7 @@ My name is Vladimir Jovanović. I am an experianced and passionate Android Devel
         <td> 
         </td> 
         <td> 
-            HolidayPirates GmbH
+            <a href="https://www.holidaypirates.com">HolidayPirates GmbH</a>
         </td> 
     </tr> 
     <tr> 
@@ -78,7 +78,7 @@ My name is Vladimir Jovanović. I am an experianced and passionate Android Devel
         <td> 
         </td> 
         <td> 
-            Bravo Studio d.o.o.
+            <a href="https://www.bravosystems.com">Bravo Studio d.o.o.</a>
         </td> 
     </tr> 
     <tr> 
@@ -97,7 +97,7 @@ My name is Vladimir Jovanović. I am an experianced and passionate Android Devel
         <td> 
         </td> 
         <td> 
-            Asseco SEE
+            <a href="https://see.asseco.com">Asseco SEE</a>
         </td> 
     </tr> 
 </table>
