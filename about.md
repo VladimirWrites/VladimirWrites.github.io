@@ -44,7 +44,7 @@ My name is Vladimir Jovanović. I am an experianced and passionate Android Devel
         </td> 
     </tr> 
     <tr> 
-    	<td> 
+         <td> 
         </td> 
     </tr> 
     <tr> 
@@ -82,7 +82,7 @@ My name is Vladimir Jovanović. I am an experianced and passionate Android Devel
         </td> 
     </tr> 
     <tr> 
-    	<td> 
+        <td> 
         </td> 
     </tr> 
     <tr> 
@@ -106,12 +106,12 @@ My name is Vladimir Jovanović. I am an experianced and passionate Android Devel
 <h2>Skills</h2>
 
 <ul class="skill-list">
-	<li>Android Development</li>
-	<li>Java</li>
-	<li>Kotlin</li>
-	<li>Wear OS development</li>
-	<li>Unit and Instrumentation Tests</li>
-	<li>Firebase</li>
-	<li>Git</li>
-	<li>Agile - Scrum</li>
+    <li>Android Development</li>
+    <li>Java</li>
+    <li>Kotlin</li>
+    <li>Wear OS development</li>
+    <li>Unit and Instrumentation Tests</li>
+    <li>Firebase</li>
+    <li>Git</li>
+    <li>Agile - Scrum</li>
 </ul>

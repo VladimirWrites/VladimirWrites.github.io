@@ -14,9 +14,9 @@ externalLink: false
 ---
 
 <p style="text-align: center">
-    <video width="560" height="310" controls poster="../assets/projects/watch_face_video_preview.png">
+    <video controls poster="../assets/projects/watch_face_video_preview.png">
         <source src="../assets/projects/watch_face_overview.mp4" type="video/mp4">
-    </video>
+    </video> 
 </p>
 
 [Wear OS Fundamentals: Watch Face](https://app.pluralsight.com/library/courses/wear-os-fundamentals-watch-face) is my first course made for [Pluralsight](https://pluralsight.com).
