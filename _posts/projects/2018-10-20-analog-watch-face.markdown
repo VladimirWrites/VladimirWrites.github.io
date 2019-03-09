@@ -26,7 +26,7 @@ This is an improved version of the demo project created for the Pluralsight's co
     <div class="toright">
         <p>Analog Watch Face supports a wide variety of customizations. Using settings screen, the user can add up to four complications to the watch face. Apart from that, the user can hide complications in ambient mode, as well as hide ticks in ambient and interactive modes. Also, the background of the watch face can be changed to black. The app can be downloaded at the following link:</p>
 
-        <a href="https://play.google.com/store/apps/details?id=com.vlad1m1r.watchface" title="PlayStore">
+        <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.vlad1m1r.watchface" title="PlayStore">
             <p style="text-align: center">
                 <img class="image" src="../assets/projects/play_badge.png" alt="PlayStore" style="width:70%">
             </p>

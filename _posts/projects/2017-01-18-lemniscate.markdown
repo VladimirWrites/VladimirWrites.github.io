@@ -29,7 +29,7 @@ Lemniscate is a library that will help you to make your progress view nice and s
     <div class="toright">
         <p>As a part of the project, there is also an Android application that will help you pick the best progress view for your needs. Using it, you can also choose the right parameters for a specific curve so that the view has the exact behavior that you want. The application is available at the link down below.</p>
 
-        <a href="https://play.google.com/store/apps/details?id=com.vlad1m1r.lemniscate.sample" title="PlayStore">
+        <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.vlad1m1r.lemniscate.sample" title="PlayStore">
             <p style="text-align: center">
                 <img class="image" src="../assets/projects/play_badge.png" alt="PlayStore" style="width:70%">
             </p>
