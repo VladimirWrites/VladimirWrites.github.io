@@ -20,7 +20,7 @@ My name is Vladimir Jovanović. I am an experianced and passionate Android Devel
         <td> 
         </td> 
         <td> 
-            <a href="https://www.pluralsight.com">Pluralsight, Inc.</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.pluralsight.com">Pluralsight, Inc.</a>
         </td> 
     </tr> 
     <tr> 
@@ -39,7 +39,7 @@ My name is Vladimir Jovanović. I am an experianced and passionate Android Devel
         <td> 
         </td> 
         <td> 
-            <a href="https://www.flixbus.com">FlixBus GmbH</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.flixbus.com">FlixBus GmbH</a>
         </td> 
     </tr> 
     <tr> 
@@ -58,7 +58,7 @@ My name is Vladimir Jovanović. I am an experianced and passionate Android Devel
         <td> 
         </td> 
         <td> 
-            <a href="https://www.holidaypirates.com">HolidayPirates GmbH</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.holidaypirates.com">HolidayPirates GmbH</a>
         </td> 
     </tr> 
     <tr> 
@@ -77,7 +77,7 @@ My name is Vladimir Jovanović. I am an experianced and passionate Android Devel
         <td> 
         </td> 
         <td> 
-            <a href="https://www.bravosystems.com">Bravo Studio d.o.o.</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.bravosystems.com">Bravo Studio d.o.o.</a>
         </td> 
     </tr> 
     <tr> 
@@ -96,7 +96,7 @@ My name is Vladimir Jovanović. I am an experianced and passionate Android Devel
         <td> 
         </td> 
         <td> 
-            <a href="https://see.asseco.com">Asseco SEE</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://see.asseco.com">Asseco SEE</a>
         </td> 
     </tr> 
 </table>
