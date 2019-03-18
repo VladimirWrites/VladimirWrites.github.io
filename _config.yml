@@ -34,12 +34,14 @@ disqus:
   categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-facebook: myfacebook
-twitter: mytwitter
-instagram: myinstagram
-linkedin: mylinkedin
-github: mygithub
-email: myemail@gmail.com
+twitter: VladimirWrites
+linkedin: vladimir-j
+github: VladimirWrites
+stackoverflow: 5821000
+medium: VladimirWrites
+pluralsight: vladimir-jovanovic
+email: write@vladimirj.com
+playstore: 6228447112810662324
 
 authors:
   johndoe:

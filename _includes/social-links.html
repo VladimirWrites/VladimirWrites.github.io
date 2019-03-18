@@ -31,6 +31,60 @@
         </a>
     {% endif %}
 
+    {% if site.gitlab %}
+        <a class="link" data-title="gitlab.com/{{ site.gitlab }}" href="https://gitlab.com/{{ site.gitlab }}" target="_blank">
+            <svg class="icon icon-gitlab"><use xlink:href="#icon-gitlab"></use></svg>
+        </a>
+    {% endif %}
+
+    {% if site.stackoverflow %}
+        <a class="link" data-title="stackoverflow.com/users/{{ site.stackoverflow }}" href="http://stackoverflow.com/users/{{ site.stackoverflow }}" target="_blank">
+            <svg class="icon icon-stackoverflow"><use xlink:href="#icon-stackoverflow"></use></svg>
+        </a>
+    {% endif %}
+
+    {% if site.quora %}
+        <a class="link" data-title="quora.com/profile/{{ site.quora }}" href="https://www.quora.com/profile/{{ site.quora }}" target="_blank">
+            <svg class="icon icon-quora"><use xlink:href="#icon-quora"></use></svg>
+        </a>
+    {% endif %}
+
+    {% if site.reddit %}
+        <a class="link" data-title="reddit.com/user/{{ site.reddit }}" href="https://www.reddit.com/user/{{ site.reddit }}" target="_blank">
+            <svg class="icon icon-reddit"><use xlink:href="#icon-reddit"></use></svg>
+        </a>
+    {% endif %}
+
+    {% if site.medium %}
+        <a class="link" data-title="medium.com/@{{ site.medium }}" href="https://medium.com/@{{ site.medium }}" target="_blank">
+            <svg class="icon icon-medium"><use xlink:href="#icon-medium"></use></svg>
+        </a>
+    {% endif %}
+
+    {% if site.vimeo %}
+        <a class="link" data-title="vimeo.com/{{ site.vimeo }}" href="https://vimeo.com/{{ site.vimeo }}" target="_blank">
+            <svg class="icon icon-vimeo"><use xlink:href="#icon-vimeo"></use></svg>
+        </a>
+    {% endif %}
+
+    {% if site.lanyrd %}
+        <a class="link" data-title="lanyrd.com/{{ site.lanyrd }}" href="https://lanyrd.com/{{ site.lanyrd }}" target="_blank">
+            <svg class="icon icon-microphone"><use xlink:href="#icon-microphone"></use></svg>
+        </a>
+    {% endif %}
+
+	{% if site.playstore %}
+        <a class="link" data-title="play.google.com/store/apps/dev?id={{ site.playstore }}" href="https://play.google.com/store/apps/dev?id={{ site.playstore }}" target="_blank">
+            <img class="icon" src="{{ site.url }}/assets/images/ic_playstore.png" alt="playstore">
+        </a>
+    {% endif %}
+
+    {% if site.pluralsight %}
+        <a class="link" data-title="pluralsight.com/profile/author/{{ site.pluralsight }}" href="https://app.pluralsight.com/profile/author/{{ site.pluralsight }}" target="_blank">
+            <img class="icon" src="{{ site.url }}/assets/images/ic_pluralsight.png" alt="pluralsight">
+        </a>
+    {% endif %}
+
     {% if site.email %}
         <a class="link" data-title="{{ site.email }}" href="mailto:{{ site.email }}"  rel="noopener" alt="anchor link for email" aria-label="anchor link for email">
             <i class="fa-regular fa-envelope"></i>
