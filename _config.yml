@@ -1,37 +1,38 @@
 # main text of home
-title: John Doe
-bio: A Person who travels the world eating noodles
+name: Vladimir Jovanović
+bio: Android Developer
 
 # twitter summary info
-description: A blog about technology and stuff related
+description: Vladimir's personal website
 
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/profile.jpg
+picture: assets/images/vladimir-jovanovic.jpg
 
-# your site color theme, true for dark theme, 
-# false to light theme, auto to switch with system.
-dark-theme: auto
+# your site color theme, false to light theme
+dark-theme: false
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
-resume: true
+resume: false
 resume-external: true
 resume-url: https://google.com/?q=my+resume
 
-url: https://sergiokopplin.github.io/indigo
-# your url: https://USERNAME.github.io
+url: https://vladimirj.dev
 
 permalink: /:title/
 
 # To enable google analytics, supply your token below
-# analytics-google: 'UA-MYANALYTICS'
+
+# To enable piwik tracking, supply your url & site ID below
+# analytics-piwik-url: 'piwik.my-host.com'
+# analytics-piwik-id: 1
 
 # if you don't want comments in your posts, leave categories empty
-disqus:
-  shortname: github # enter this from your disqus account
-  categories: [blog, project] # only show disqus for posts that have these categories
+# disqus:
+#   shortname: personal-blog-zfhmzkv4ss # enter this from your disqus account
+#   categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
 twitter: VladimirWrites
@@ -40,30 +41,29 @@ github: VladimirWrites
 stackoverflow: 5821000
 medium: VladimirWrites
 pluralsight: vladimir-jovanovic
-email: write@vladimirj.com
+email: write@vladimirj.dev
 playstore: 6228447112810662324
 
 authors:
-  johndoe:
-    name: John Doe
-    bio: A Man who travels the world eating noodles
-    external-image: false
-    picture: assets/images/profile.jpg
-    twitter: johndoe
-  jamesfoster:
-    name: James Foster
-    bio: A Man who develops software with coffee
-    external-image: false
-    picture: assets/images/james.jpg
-    twitter: jamesfoster
+    vladimirjovanovic:
+        name: Vladimir Jovanovic
+        bio: Android Developer
+        external-image: false
+        picture: assets/images/vladimir-jovanovic.jpg
+        twitter: VladimirWrites
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
 # normal = 560px / large = 810px
-width: normal
+width: large
+
+# if you don't need pagination, comment the *paginate* configs below
+# paginate: 5
+# paginate_path: "blog/:num/"
 
 # if you don't need projects, comment the *projects* configs below
 projects: true
+talks: true
 
 # if you don't need "about" or "blog", comment them out below
 about: true
@@ -96,6 +96,9 @@ defaults:
       # setting all post to not hidden by default,
       # can be overridden in the front matter for a specific post
       hidden: false
+
+jekyll-mentions:
+    base_url: https://github.com
 
 plugins:
   - jekyll-seo-tag
