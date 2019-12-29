@@ -2,10 +2,12 @@
 title: "Wear OS Fundamentals: Watch Face"
 layout: post
 date: 2018-10-03 12:01
-tag: video, course, pluralsight
+tag: 
+- video 
+- course 
+- pluralsight
 headerImage: true
 image: ../assets/projects/icon_pluralsight.png
-projects: true
 hidden: true # don't count this post in blog pagination
 description: "Building a watch face is the easiest way to expand your brand to Wear OS. In this course, you’ll learn how to create a functional, optimized, and good looking watch face for wearable devices running Wear OS."
 category: project
