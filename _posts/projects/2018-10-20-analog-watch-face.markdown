@@ -2,10 +2,11 @@
 title: "Analog Watch Face"
 layout: post
 date: 2018-10-20 12:01
-tag: wearos, open-source
+tag: 
+- wearos 
+- open source
 image: ../assets/projects/icon_analog_watch_face.png
 headerImage: true
-projects: true
 hidden: true # don't count this post in blog pagination
 description: "An easy way to make your progress view nice and sleek."
 category: project

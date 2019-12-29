@@ -2,10 +2,12 @@
 title: "Lemniscate Progress View"
 layout: post
 date: 2017-01-18 12:01
-tag: android, library, open-source
+tag: 
+- android 
+- library 
+- open source
 headerImage: true
 image: ../assets/projects/icon_lemniscate.png
-projects: true
 hidden: true # don't count this post in blog pagination
 description: "An easy way to make your progress view nice and sleek."
 category: project

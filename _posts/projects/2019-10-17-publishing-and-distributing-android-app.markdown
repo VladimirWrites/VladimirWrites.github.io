@@ -2,10 +2,12 @@
 title: "Publishing and Distributing Your Android Application"
 layout: post
 date: 2019-10-17 12:01
-tag: video, course, pluralsight
+tag: 
+- video 
+- course 
+- pluralsight
 headerImage: true
 image: ../assets/projects/icon_pluralsight.png
-projects: true
 hidden: true # don't count this post in blog pagination
 description: "You created a brand new Android application, but so far it only has one user: you. This course will teach you all that you need to know about the publishing and distributing process so that you can share your amazing app with the world."
 category: project

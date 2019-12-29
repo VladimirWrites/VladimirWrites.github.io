@@ -1,11 +1,13 @@
 ---
 title: "Getting Started With Android Studio"
 layout: post
-date: 2019-06-19 12:01
-tag: video, course, pluralsight
+date: 2019-06-21 12:01
+tag: 
+- video 
+- course 
+- pluralsight
 headerImage: true
 image: ../assets/projects/icon_pluralsight.png
-projects: true
 hidden: true # don't count this post in blog pagination
 description: "Android Studio is a great IDE for Android developers. This course takes you through its most important features and prepares you for the joyous and rewarding journey of becoming an Android developer."
 category: project
