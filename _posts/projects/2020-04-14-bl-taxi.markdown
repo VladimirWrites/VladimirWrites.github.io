@@ -1,0 +1,53 @@
+---
+title: "BL Taxi"
+layout: post
+date: 2020-04-14 12:01
+tag: 
+- android 
+- open source
+image: ../assets/projects/icon_bl_taxi.png
+headerImage: true
+hidden: true # don't count this post in blog pagination
+description: "🚕 BL Taxi is a simple app for calling a taxi in the city Banja Luka built using modern Android development tools"
+category: project
+author: vladimirjovanovic
+externalLink: false
+---
+
+![Screenshot](../assets/projects/screen_bl_taxi.png)
+
+🚕 BL Taxi is a simple app for calling a taxi in the city Banja Luka built using modern Android development tools
+
+<div class="breaker"></div>
+
+<div class="side-by-side">
+    <div class="toleft">
+        <img class="image" src="../assets/projects/dark_mode_bl_taxi.png" alt="Screenshot" style="width:90%">
+    </div>
+    <div class="toright">
+        <p>This project brings to the table set of best practices, tools, and solutions:
+            <ul>
+                <li>100% Kotlin</li>
+                <li>Modern architecture (Clean Architecture, Multi-Module setup, Model-View-ViewModel)</li>
+                <li>Android Jetpack</li>
+                <li>Single-activity architecture, using the Navigation component</li>
+                <li>CI pipeline (Bitrise)</li>
+                <li>Testing (Using Jacoco for test coverage)</li>
+                <li>Dependency Injection</li>
+                <li>Material Design (Dark theme)</li>
+            </ul>
+            The app can be downloaded at the following link:
+        </p>
+
+        <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.vlad1m1r.bltaxi" title="PlayStore">
+            <p style="text-align: center">
+                <img class="image" src="../assets/projects/play_badge.png" alt="PlayStore" style="width:70%">
+            </p>
+        </a>
+    </div>
+</div>
+
+<div class="breaker"></div>
+
+Check it out [here](https://github.com/VladimirWrites/BLTaxi).
+If you need help, just let me know by [opening an issue](https://github.com/VladimirWrites/BLTaxi/issues) or down below in the comments section.
