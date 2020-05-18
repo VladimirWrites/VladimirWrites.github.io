@@ -21,7 +21,7 @@ externalLink: false
     </video> 
 </p>
 
-[Getting Started with Android Studio](https://app.pluralsight.com/library/courses/android-studio-getting-started) is my second course made for [Pluralsight](https://pluralsight.com).
+[Getting Started with Android Studio](https://pluralsight.pxf.io/L3QOj) is my second course made for [Pluralsight](https://pluralsight.pxf.io/ebQ56).
 
 <div class="breaker"></div>
 
