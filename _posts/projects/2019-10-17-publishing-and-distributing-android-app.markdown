@@ -21,7 +21,7 @@ externalLink: false
     </video> 
 </p>
 
-[Publishing and Distributing Your Android Application](https://app.pluralsight.com/library/courses/publishing-distributing-android-application) is my third course made for [Pluralsight](https://pluralsight.com).
+[Publishing and Distributing Your Android Application](https://pluralsight.pxf.io/jAq76) is my third course made for [Pluralsight](https://pluralsight.pxf.io/ebQ56).
 
 <div class="breaker"></div>
 

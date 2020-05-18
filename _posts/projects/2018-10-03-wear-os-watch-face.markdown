@@ -21,7 +21,7 @@ externalLink: false
     </video> 
 </p>
 
-[Wear OS Fundamentals: Watch Face](https://app.pluralsight.com/library/courses/wear-os-fundamentals-watch-face?utm_source=vladimirjdev&utm_medium=video&utm_campaign=authordemo) is my first course made for [Pluralsight](https://pluralsight.com).
+[Wear OS Fundamentals: Watch Face](https://pluralsight.pxf.io/x64nR) is my first course made for [Pluralsight](https://pluralsight.pxf.io/ebQ56).
 
 <div class="breaker"></div>
 
