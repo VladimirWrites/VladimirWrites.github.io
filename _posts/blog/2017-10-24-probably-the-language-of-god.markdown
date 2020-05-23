@@ -1,5 +1,5 @@
 ---
-title: PRObably the Language Of God”
+title: PRObably the Language Of God
 layout: post
 date: 2017-10-24 09:44
 headerImage: false
