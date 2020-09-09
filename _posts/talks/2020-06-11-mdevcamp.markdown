@@ -1,0 +1,24 @@
+---
+title: "mDevCamp 2020: Rewrite or Refactor That Is the Question"
+layout: post
+date: 2020-06-11 12:01
+tag: 
+- talk 
+- mdevcamp
+headerImage: true
+image: ../assets/projects/icon_mdevcamp.png
+hidden: true # don't count this post in blog pagination
+description: "Recording of the talk given at mDevCamp 2020"
+category: talk
+author: vladimirjovanovic
+externalLink: false
+---
+<p style="text-align: center">
+	<iframe width="810" height="445"  src="https://www.youtube.com/embed/ivurPzNePAc" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+</p>
+
+<div class="breaker"></div>
+
+<p style="text-align: center">
+	<iframe src="//www.slideshare.net/slideshow/embed_code/key/BHRdibybJto4Yc" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen></iframe>
+</p>
