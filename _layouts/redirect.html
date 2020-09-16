@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting...</title>
+  
+  <meta property="twitter:card" content="summary_large_image"/>
+  <meta property="twitter:title" content="{{page.title}}"/>
+  <meta property="twitter:description" content="{{page.description}}"/>
+  <meta property="twitter:url" content="{{page.redir_to}}"/>
+  <meta property="twitter:image:src" content="{{page.image}}"/>
+  
+  <meta property="og:title" content="{{page.title}}" />
+  <meta property="og:url" content="{{page.redir_to}}" />
+  <meta property="og:image" content="{{page.image}}" />
+  <meta property="og:description" content="{{page.description}}" />
+  {% comment %}
+    Don't use 'redirect_to' to avoid conflict
+    with the page redirection plugin: if that is defined
+    it takes over.
+  {% endcomment %}
+  <link rel="canonical" href="{{ page.redir_to }}"/>
+  <noscript>
+	<meta http-equiv="refresh" content="0;url={{ page.redir_to }}" />
+	</noscript>
+</head>
+<script>window.opener = null; location.replace("{{ page.redir_to }}")</script>
+</html>
