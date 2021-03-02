@@ -21,7 +21,7 @@ externalLink: false
     </video> 
 </p>
 
-[Publishing and Distributing Your Android Application](https://pluralsight.pxf.io/xgdk1) is my third course made for [Pluralsight](https://pluralsight.pxf.io/ebQ56).
+[Firebase on Android: Remote Config and A/B Testing](https://pluralsight.pxf.io/xgdk1) is my forth course made for [Pluralsight](https://pluralsight.pxf.io/ebQ56).
 
 <div class="breaker"></div>
 
