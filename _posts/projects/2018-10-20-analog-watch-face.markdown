@@ -16,7 +16,7 @@ externalLink: false
 
 ![Screenshot](../assets/projects/screen_watch_face.png)
 
-This is an improved version of the demo project created for the Pluralsight's course ["Wear OS Fundamentals: Watch Face"](https://app.pluralsight.com/library/courses/wear-os-fundamentals-watch-face). The application is extremely optimized and lightweight with the size under 700 KB.
+This is an improved version of the demo project created for the Pluralsight's course ["Wear OS Fundamentals: Watch Face"](https://app.pluralsight.com/library/courses/wear-os-fundamentals-watch-face). The application is extremely optimized and lightweight with the size under 2 MB.
 
 <div class="breaker"></div>
 
