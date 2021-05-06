@@ -63,4 +63,4 @@ Now you're probably thinking: "This Firebase Predictions thing sounds amazing. S
 
 If you would like to learn more about Firebase Remote Config check out my Pluralsight course: [**_Firebase on Android: Remote Config and A/B Testing_**](http://pluralsight.pxf.io/xgdk1)
 
-**_Thanks for reading! If you enjoyed this story, please share it! Also, feel free to leave a comment 💬 below._**
+**_Thanks for reading! If you enjoyed this story, please share it!_**

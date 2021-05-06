@@ -47,4 +47,4 @@ Lemniscate is a library that will help you to make your progress view nice and s
 <div class="breaker"></div>
 
 Check it out [here](https://github.com/VladimirWrites/Lemniscate).
-If you need help, just let me know by [opening an issue](https://github.com/VladimirWrites/Lemniscate/issues) or down below in the comments section.
+If you need help, just let me know by [opening an issue](https://github.com/VladimirWrites/Lemniscate/issues).
