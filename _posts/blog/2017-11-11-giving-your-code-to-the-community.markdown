@@ -48,4 +48,4 @@ These are things that I have learned from my own mistakes. One thing that I stil
 
 <div class="breaker"></div>
 
-**_Thanks for reading! If you enjoyed this story, please share it! Also, feel free to leave a comment 💬 below._**
+**_Thanks for reading! If you enjoyed this story, please share it!_**

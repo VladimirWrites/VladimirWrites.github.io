@@ -44,4 +44,4 @@ I’ve also added some sample data, and will keep adding more. If you notice tha
 
 <div class="breaker"></div>
 
-**_Thanks for reading! If you enjoyed this story, please share it! Also, feel free to leave a comment 💬 below._**
+**_Thanks for reading! If you enjoyed this story, please share it!_**

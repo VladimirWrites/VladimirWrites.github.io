@@ -68,4 +68,4 @@ The full source code of this and some other examples can be found in the [GitHub
 
 <div class="breaker"></div>
 
-**_Thanks for reading! If you enjoyed this story, please share it! Also, feel free to leave a comment 💬 below._**
+**_Thanks for reading! If you enjoyed this story, please share it!_**

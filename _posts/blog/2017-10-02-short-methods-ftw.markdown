@@ -58,4 +58,4 @@ P.S. I promise that I will refactor long methods in [my projects on GitHub](http
 
 <div class="breaker"></div>
 
-**_Thanks for reading! If you enjoyed this story, please share it! Also, feel free to leave a comment 💬 below._**
+**_Thanks for reading! If you enjoyed this story, please share it!_**

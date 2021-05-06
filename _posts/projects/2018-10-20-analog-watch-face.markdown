@@ -38,4 +38,4 @@ This is an improved version of the demo project created for the Pluralsight's co
 <div class="breaker"></div>
 
 Check it out [here](https://github.com/VladimirWrites/AnalogWatchFace).
-If you need help, just let me know by [opening an issue](https://github.com/VladimirWrites/AnalogWatchFace/issues) or down below in the comments section.
+If you need help, just let me know by [opening an issue](https://github.com/VladimirWrites/AnalogWatchFace/issues).

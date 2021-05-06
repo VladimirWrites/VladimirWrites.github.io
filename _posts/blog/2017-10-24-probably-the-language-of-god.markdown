@@ -55,4 +55,4 @@ So, should you learn Prolog? Well, it’s the 21st century, and you should be le
 
 <div class="breaker"></div>
 
-**_Thanks for reading! If you enjoyed this story, please share it! Also, feel free to leave a comment 💬 below._**
+**_Thanks for reading! If you enjoyed this story, please share it!_**

@@ -44,4 +44,4 @@ To sum up, having static references to objects is really dangerous, and it’s e
 
 <div class="breaker"></div>
 
-**_Thanks for reading! If you enjoyed this story, please share it! Also, feel free to leave a comment 💬 below._**
+**_Thanks for reading! If you enjoyed this story, please share it!_**
