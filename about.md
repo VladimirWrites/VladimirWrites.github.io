@@ -4,10 +4,26 @@ layout: page
 ---
 ![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %})
 
-My name is Vladimir Jovanović. I am an experianced and passionate Android Developer. For the past 6 years, I have been helping companies build clean and stable Android applications.
+My name is Vladimir Jovanović. I am an experianced and passionate Android Developer. Since Android 2.2, I have been helping companies build clean and stable Android applications.
 
 <h2>Experience</h2>
 <table> 
+	<tr> 
+        <td> 
+            <i>Jan 2022 - Present</i> &nbsp;&nbsp;&nbsp;&nbsp;
+        </td> 
+        <td> 
+            <strong>Senior Android Engineer</strong>
+        </td> 
+    </tr> 
+    <tr> 
+        <td> 
+        </td> 
+        <td> 
+            <a target="_blank" rel="noopener noreferrer" href="https://tidal.com/">TIDAL</a>
+        </td> 
+    </tr> 
+
     <tr> 
         <td> 
             <i>Oct 2018 - Present</i> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -29,10 +45,10 @@ My name is Vladimir Jovanović. I am an experianced and passionate Android Devel
     </tr> 
     <tr> 
         <td> 
-            <i>Sep 2017 - Present</i> &nbsp;&nbsp;&nbsp;&nbsp;
+            <i>Sep 2017 - Jan 2022</i> &nbsp;&nbsp;&nbsp;&nbsp;
         </td> 
         <td> 
-            <strong>Android Engineer</strong>
+            <strong>Senior Android Engineer</strong>
         </td> 
     </tr> 
     <tr> 
