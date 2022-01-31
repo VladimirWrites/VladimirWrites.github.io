@@ -23,8 +23,6 @@ url: https://vladimirj.dev
 
 permalink: /:title/
 
-# To enable google analytics, supply your token below
-
 # To enable piwik tracking, supply your url & site ID below
 # analytics-piwik-url: 'piwik.my-host.com'
 # analytics-piwik-id: 1
@@ -87,6 +85,7 @@ show-author: true
 # do you want some animations?
 animation: true
 
+<<<<<<< HEAD
 # add default values to specific pages or layouts
 defaults:
   - scope:
@@ -100,11 +99,14 @@ defaults:
 jekyll-mentions:
     base_url: https://github.com
 
+=======
+>>>>>>> Fix rebase
 plugins:
   - jekyll-seo-tag
   - jekyll-gist
   - jekyll-feed
   - jemoji
+<<<<<<< HEAD
 
 compress_html:
   ignore:
@@ -120,3 +122,17 @@ exclude:
     "FAQ.md",
     "vendor",
   ]
+=======
+  - jekyll-admin
+
+jekyll-mentions:
+    base_url: https://github.com
+
+compress_html:
+    ignore:
+        envs:
+        - development
+        - stage
+
+exclude: ["travis.sh", "Rakefile", "README.md", "Gemfile", "Gemfile.lock", "FAQ.md"]
+>>>>>>> Fix rebase
