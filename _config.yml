@@ -85,7 +85,6 @@ show-author: true
 # do you want some animations?
 animation: true
 
-<<<<<<< HEAD
 # add default values to specific pages or layouts
 defaults:
   - scope:
@@ -99,14 +98,12 @@ defaults:
 jekyll-mentions:
     base_url: https://github.com
 
-=======
->>>>>>> Fix rebase
 plugins:
   - jekyll-seo-tag
   - jekyll-gist
   - jekyll-feed
   - jemoji
-<<<<<<< HEAD
+
 
 compress_html:
   ignore:
@@ -122,17 +119,4 @@ exclude:
     "FAQ.md",
     "vendor",
   ]
-=======
-  - jekyll-admin
 
-jekyll-mentions:
-    base_url: https://github.com
-
-compress_html:
-    ignore:
-        envs:
-        - development
-        - stage
-
-exclude: ["travis.sh", "Rakefile", "README.md", "Gemfile", "Gemfile.lock", "FAQ.md"]
->>>>>>> Fix rebase
