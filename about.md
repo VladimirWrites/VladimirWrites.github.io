@@ -10,7 +10,23 @@ My name is Vladimir Jovanović. I am an experianced and passionate Android Devel
 <table> 
 	<tr> 
         <td> 
-            <i>Jan 2022 - Present</i> &nbsp;&nbsp;&nbsp;&nbsp;
+            <i>Apr 2025 - Present</i> &nbsp;&nbsp;&nbsp;&nbsp;
+        </td> 
+        <td> 
+            <strong>Senior Android Engineer</strong>
+        </td> 
+    </tr>
+	<tr> 
+        <td> 
+        </td> 
+        <td> 
+            <a target="_blank" rel="noopener noreferrer" href="https://grammarly.com">Grammarly</a>
+        </td> 
+    </tr> 
+	
+	<tr> 
+        <td> 
+            <i>Jan 2022 - Feb 2025</i> &nbsp;&nbsp;&nbsp;&nbsp;
         </td> 
         <td> 
             <strong>Senior Android Engineer</strong>
@@ -20,7 +36,7 @@ My name is Vladimir Jovanović. I am an experianced and passionate Android Devel
         <td> 
         </td> 
         <td> 
-            <a target="_blank" rel="noopener noreferrer" href="https://tidal.com/">TIDAL</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://tidal.com/">TIDAL (Block Inc.)</a>
         </td> 
     </tr> 
 
