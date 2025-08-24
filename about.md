@@ -155,9 +155,13 @@ My name is Vladimir Jovanović. I am an experianced and passionate Android Devel
     <li>Android Development</li>
     <li>Java</li>
     <li>Kotlin</li>
-    <li>Wear OS development</li>
-    <li>Unit and Instrumentation Tests</li>
+	<li>Kotlin Multiplatform</li>
+	<li>Public speaking</li>
+	<li>Mentoring</li>
+	<li>Project Management</li>
+    <li>Unit, Screenshot, and Instrumentation testing</li>
     <li>Firebase</li>
     <li>Git</li>
+	<li>Wear OS development</li>
     <li>Agile - Scrum</li>
 </ul>
