@@ -26,6 +26,22 @@ My name is Vladimir Jovanović. I am an experianced and passionate Android Devel
 	
 	<tr> 
         <td> 
+            <i>Mar 2025 - Present</i> &nbsp;&nbsp;&nbsp;&nbsp;
+        </td> 
+        <td> 
+            <strong>Author</strong>
+        </td> 
+    </tr>
+	<tr> 
+        <td> 
+        </td> 
+        <td> 
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/learning/">LinkedIn Learning</a>
+        </td> 
+    </tr> 
+	
+	<tr> 
+        <td> 
             <i>Jan 2022 - Feb 2025</i> &nbsp;&nbsp;&nbsp;&nbsp;
         </td> 
         <td> 
