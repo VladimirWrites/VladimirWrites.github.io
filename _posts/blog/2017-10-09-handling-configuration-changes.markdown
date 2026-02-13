@@ -40,7 +40,7 @@ Think about it. You can’t do that `onDestory()`, because you need your data to
 
 And at some point, on some device, that’s exactly what’s going to happen. You will get `OutOfMemoryException`, and your application will crash. Just to be clear, next step **should not** be adding `android:largeHeap="true"` into your `AndroidManifest.xml`. It should be fixing your application. You can read more about proper handling of configuration changes [here](https://developer.android.com/guide/topics/resources/runtime-changes.html#HandlingTheChange).
 
-To sum up, having static references to objects is really dangerous, and it’s even worst to do it inside the objects which have a lifecycle such as `Activities`, `Fragments`, `Services` etc. Please use your static variables responsibly.
+To sum up, having static references to objects is really dangerous, and it's even worse to do it inside the objects which have a lifecycle such as `Activities`, `Fragments`, `Services` etc. Please use your static variables responsibly.
 
 <div class="breaker"></div>
 

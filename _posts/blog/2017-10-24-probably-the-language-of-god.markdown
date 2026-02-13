@@ -8,7 +8,7 @@ tag:
 - prolog
 category: blog
 author: vladimirjovanovic
-description: During my university days, while I was studying Mathematics and CS, software development was refreshment of applied science in a sea of theoretical math. But than at my 4th semester I got the Prolog.
+description: During my university days, while I was studying Mathematics and CS, software development was refreshment of applied science in a sea of theoretical math. But then at my 4th semester I got the Prolog.
 ---
 
 <p style="text-align: center">

@@ -4,7 +4,7 @@ layout: page
 ---
 ![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %})
 
-My name is Vladimir Jovanović. I am an experianced and passionate Android Developer. Since Android 2.2, I have been helping companies build clean and stable Android applications.
+My name is Vladimir Jovanović. I am an experienced and passionate Android Developer. Since Android 2.2, I have been helping companies build clean and stable Android applications.
 
 <h2>Experience</h2>
 <table> 
