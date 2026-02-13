@@ -4,3 +4,6 @@ _site
 Gemfile.lock
 .bundle
 vendor/
+CLAUDE.md
+.claude/
+.idea/
