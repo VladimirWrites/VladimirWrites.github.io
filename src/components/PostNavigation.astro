@@ -18,10 +18,16 @@ const next = currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] :
 {(prev || next) && (
   <div class="post-navigation">
     {prev ? (
-      <a class="prev" href={`/${prev.id.replace(/\.md$/, '')}/`}>{prev.data.title}</a>
+      <a class="prev" href={`/${prev.id.replace(/\.md$/, '')}/`}>
+        <span class="nav-label">&larr; Previous</span>
+        {prev.data.title}
+      </a>
     ) : <span />}
     {next ? (
-      <a class="next" href={`/${next.id.replace(/\.md$/, '')}/`}>{next.data.title}</a>
+      <a class="next" href={`/${next.id.replace(/\.md$/, '')}/`}>
+        <span class="nav-label">Next &rarr;</span>
+        {next.data.title}
+      </a>
     ) : <span />}
   </div>
 )}

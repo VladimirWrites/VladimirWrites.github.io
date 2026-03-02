@@ -28,7 +28,7 @@ const sortedTags = [...tagMap.entries()]
   .map(([tag, posts]) => [tag, posts.sort((a, b) => b.date.valueOf() - a.date.valueOf())] as const);
 ---
 <PageLayout title="Tags" currentPage="Tags" description="All tags">
-  <h2 class="page-title">Tags</h2>
+  <h1 class="page-title">Tags</h1>
 
   <div class="tag-cloud">
     {sortedTags.map(([tag]) => (

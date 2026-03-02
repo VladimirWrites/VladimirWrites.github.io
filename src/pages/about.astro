@@ -3,10 +3,14 @@ import PageLayout from '../layouts/PageLayout.astro';
 import ExperienceTimeline from '../components/ExperienceTimeline.astro';
 import SkillsList from '../components/SkillsList.astro';
 ---
-<PageLayout title="About" currentPage="About" description="About Vladimir Jovanović - Android Developer">
-  <img src="/images/vladimir-jovanovic.jpg" alt="Vladimir Jovanović" style="width: 140px; border-radius: 50%; margin: 0 auto var(--space-xl); display: block;" />
-
-  <p>My name is Vladimir Jovanović. I am an experienced and passionate Android Developer. Since Android 2.2, I have been helping companies build clean and stable Android applications.</p>
+<PageLayout title="About" currentPage="About" description="About Vladimir Jovanović — Android Developer">
+  <div class="about-header">
+    <img class="about-photo" src="/images/vladimir-jovanovic.jpg" alt="Vladimir Jovanović" width="160" height="160" />
+    <div class="about-intro">
+      <h1>About</h1>
+      <p>My name is Vladimir Jovanović. I am an experienced and passionate Android Developer. Since Android 2.2, I have been helping companies build clean and stable Android applications.</p>
+    </div>
+  </div>
 
   <h2>Experience</h2>
   <ExperienceTimeline />

@@ -1,7 +1,8 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
 import SEOHead from '../components/SEOHead.astro';
-import ThemeToggle from '../components/ThemeToggle.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 import '../styles/components.css';
 import '../styles/post.css';
@@ -11,9 +12,10 @@ interface Props {
   description?: string;
   image?: string;
   type?: string;
+  currentPage?: string;
 }
 
-const { title, description, image, type = 'website' } = Astro.props;
+const { title, description, image, type = 'website', currentPage } = Astro.props;
 const siteTitle = 'Vladimir Jovanović';
 const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
 ---
@@ -26,7 +28,7 @@ const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
@@ -38,19 +40,23 @@ const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
   <SEOHead title={pageTitle} description={description} image={image} type={type} />
 
   <script is:inline>
-    (function() {
-      const theme = localStorage.getItem('theme') ||
+    function getTheme() {
+      return localStorage.getItem('theme') ||
         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      document.documentElement.setAttribute('data-theme', theme);
-    })();
+    }
+    document.documentElement.setAttribute('data-theme', getTheme());
+    document.addEventListener('astro:before-swap', function(ev) {
+      ev.newDocument.documentElement.setAttribute('data-theme', getTheme());
+    });
   </script>
 
   <ViewTransitions />
 </head>
 <body>
-  <ThemeToggle />
+  <Nav currentPage={currentPage} />
   <div class="container">
     <slot />
   </div>
+  <Footer />
 </body>
 </html>

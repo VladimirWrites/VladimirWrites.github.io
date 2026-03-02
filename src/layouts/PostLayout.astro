@@ -1,12 +1,10 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import Nav from '../components/Nav.astro';
 import TagList from '../components/TagList.astro';
 import ReadTime from '../components/ReadTime.astro';
 import PostNavigation from '../components/PostNavigation.astro';
 import RelatedPosts from '../components/RelatedPosts.astro';
 import AuthorBio from '../components/AuthorBio.astro';
-import Footer from '../components/Footer.astro';
 
 interface Props {
   title: string;
@@ -23,24 +21,24 @@ interface Props {
 const { title, date, description, tags = [], image, headerImage, collection, slug, body } = Astro.props;
 
 const formattedDate = date.toLocaleDateString('en-US', {
-  weekday: 'long',
   year: 'numeric',
   month: 'long',
   day: 'numeric',
 });
 ---
 <BaseLayout title={title} description={description} image={image} type="article">
-  <Nav variant="compact" />
-
   <article>
     <div class="post-header">
-      {headerImage && image && (
+      {headerImage && image && collection === 'blog' && (
         <img class="title-image" src={image} alt={title} />
+      )}
+      {image && (collection === 'projects' || collection === 'talks') && (
+        <img class="post-header-logo" src={image} alt="" />
       )}
       <h1>{title}</h1>
       <div class="post-meta">
         <time datetime={date.toISOString()}>{formattedDate}</time>
-        <span> &mdash; </span>
+        <span class="separator">&middot;</span>
         <ReadTime content={body} />
       </div>
       {tags.length > 0 && (
@@ -61,5 +59,4 @@ const formattedDate = date.toLocaleDateString('en-US', {
 
   <RelatedPosts currentSlug={slug} currentTags={tags} collection={collection} />
   <AuthorBio />
-  <Footer />
 </BaseLayout>

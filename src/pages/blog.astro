@@ -8,18 +8,19 @@ const posts = (await getCollection('blog'))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 <PageLayout title="Blog" currentPage="Blog" description="Blog posts by Vladimir Jovanović">
-  <h2 class="page-title">Blog</h2>
+  <h1 class="page-title">Blog</h1>
   {posts.length === 0 ? (
-    <p style="text-align: center;">Nothing published yet!</p>
+    <p>Nothing published yet!</p>
   ) : (
-    <ul class="post-list">
+    <div class="post-list">
       {posts.map(post => (
         <BlogPostItem
           title={post.data.title}
+          description={post.data.description}
           date={post.data.date}
           slug={post.id.replace(/\.md$/, '')}
         />
       ))}
-    </ul>
+    </div>
   )}
 </PageLayout>
