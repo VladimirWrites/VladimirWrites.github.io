@@ -1,0 +1,285 @@
+<canvas id="particle-canvas" aria-hidden="true"></canvas>
+<div id="particle-score" aria-hidden="true">
+  <span id="particle-score-text"></span>
+  <button id="particle-retry">Play again</button>
+</div>
+
+<style>
+  #particle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  #particle-score {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    pointer-events: none;
+    z-index: 0;
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-full);
+    padding: 0.5rem 0.5rem 0.5rem 1.25rem;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    white-space: nowrap;
+  }
+
+  #particle-score.visible {
+    opacity: 1;
+  }
+
+  #particle-retry {
+    pointer-events: auto;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    color: var(--accent);
+    background: var(--accent-subtle);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-full);
+    padding: 0.3rem 0.75rem;
+    transition: background var(--transition-fast), color var(--transition-fast);
+  }
+
+  #particle-retry:hover {
+    background: var(--accent);
+    color: white;
+  }
+</style>
+
+<script>
+  function initParticles() {
+    const canvas = document.getElementById('particle-canvas') as HTMLCanvasElement | null;
+    const scoreEl = document.getElementById('particle-score') as HTMLDivElement | null;
+    const textEl = document.getElementById('particle-score-text') as HTMLSpanElement | null;
+    const retryBtn = document.getElementById('particle-retry') as HTMLButtonElement | null;
+    if (!canvas || !scoreEl || !textEl || !retryBtn) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+
+    if (isTouchDevice) {
+      canvas.style.display = 'none';
+      scoreEl.style.display = 'none';
+      return;
+    }
+
+    let width = 0;
+    let height = 0;
+    let particles: { x: number; y: number; vx: number; vy: number }[] = [];
+    let mouseX = -9999;
+    let mouseY = -9999;
+    let animationId = 0;
+    let resizeTimer: ReturnType<typeof setTimeout>;
+    let startTime = 0;
+    let cleared = false;
+
+    function getColors() {
+      const style = getComputedStyle(document.documentElement);
+      return {
+        particle: style.getPropertyValue('--text-muted').trim(),
+        line: style.getPropertyValue('--text-muted').trim(),
+      };
+    }
+
+    let colors = getColors();
+
+    function getParticleCount() {
+      const area = width * height;
+      const count = Math.floor(area / 18000);
+      return Math.max(20, Math.min(120, count));
+    }
+
+    function resize() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+
+    function reset() {
+      const count = getParticleCount();
+      particles = [];
+      for (let i = 0; i < count; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.3,
+        });
+      }
+      cleared = false;
+      startTime = 0;
+      scoreEl.classList.remove('visible');
+    }
+
+    function isOffScreen(p: { x: number; y: number }) {
+      const margin = 10;
+      return p.x < -margin || p.x > width + margin || p.y < -margin || p.y > height + margin;
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, width, height);
+
+      for (let i = 0; i < particles.length; i++) {
+        if (isOffScreen(particles[i])) continue;
+        for (let j = i + 1; j < particles.length; j++) {
+          if (isOffScreen(particles[j])) continue;
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 130) {
+            const opacity = 0.3 * (1 - dist / 130);
+            ctx.beginPath();
+            ctx.strokeStyle = colors.line;
+            ctx.globalAlpha = opacity;
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      ctx.globalAlpha = 0.8;
+      ctx.fillStyle = colors.particle;
+      for (const p of particles) {
+        if (isOffScreen(p)) continue;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      ctx.globalAlpha = 1;
+    }
+
+    function update() {
+      for (const p of particles) {
+        const dx = p.x - mouseX;
+        const dy = p.y - mouseY;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 140 && dist > 0) {
+          const force = (140 - dist) / 140 * 1.2;
+          p.vx += (dx / dist) * force;
+          p.vy += (dy / dist) * force;
+        }
+
+        p.vx *= 0.99;
+        p.vy *= 0.99;
+        p.x += p.vx;
+        p.y += p.vy;
+      }
+
+      if (!cleared && startTime > 0) {
+        const allGone = particles.every(isOffScreen);
+        if (allGone) {
+          cleared = true;
+          const elapsed = ((performance.now() - startTime) / 1000).toFixed(1);
+          textEl.textContent = `Screen cleared in ${elapsed}s. Nice work!`;
+          scoreEl.classList.add('visible');
+        }
+      }
+    }
+
+    function loop() {
+      update();
+      draw();
+      animationId = requestAnimationFrame(loop);
+    }
+
+    function handleMouseMove(e: MouseEvent) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+
+      if (startTime === 0 && !cleared) {
+        startTime = performance.now();
+      }
+    }
+
+    function handleMouseLeave() {
+      mouseX = -9999;
+      mouseY = -9999;
+    }
+
+    function handleVisibilityChange() {
+      if (document.hidden) {
+        cancelAnimationFrame(animationId);
+      } else if (!prefersReducedMotion) {
+        animationId = requestAnimationFrame(loop);
+      }
+    }
+
+    function handleResize() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        resize();
+        reset();
+        if (prefersReducedMotion) {
+          draw();
+        }
+      }, 100);
+    }
+
+    function handleRetry() {
+      reset();
+    }
+
+    // Initialize
+    resize();
+    reset();
+
+    if (prefersReducedMotion) {
+      draw();
+    } else {
+      animationId = requestAnimationFrame(loop);
+    }
+
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseleave', handleMouseLeave);
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('resize', handleResize);
+    retryBtn.addEventListener('click', handleRetry);
+
+    const observer = new MutationObserver(() => {
+      colors = getColors();
+      if (prefersReducedMotion) {
+        draw();
+      }
+    });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme'],
+    });
+
+    function cleanup() {
+      cancelAnimationFrame(animationId);
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseleave', handleMouseLeave);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('resize', handleResize);
+      retryBtn.removeEventListener('click', handleRetry);
+      observer.disconnect();
+      scoreEl.classList.remove('visible');
+      document.removeEventListener('astro:before-swap', cleanup);
+    }
+
+    document.addEventListener('astro:before-swap', cleanup);
+  }
+
+  initParticles();
+  document.addEventListener('astro:after-swap', initParticles);
+</script>

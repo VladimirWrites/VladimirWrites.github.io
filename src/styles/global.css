@@ -124,6 +124,8 @@ body {
   margin: 0 auto;
   padding: calc(var(--nav-height) + var(--space-3xl)) var(--space-lg) var(--space-3xl);
   min-height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 
 /* ================================================
