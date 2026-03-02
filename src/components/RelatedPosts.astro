@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+
+interface Props {
+  currentSlug: string;
+  currentTags: string[];
+  collection: 'blog' | 'projects' | 'talks';
+}
+
+const { currentSlug, currentTags, collection } = Astro.props;
+
+const allPosts = await getCollection(collection);
+const related = allPosts
+  .filter(post => post.id !== currentSlug)
+  .map(post => ({
+    ...post,
+    matchCount: post.data.tag.filter((t: string) => currentTags.includes(t)).length,
+  }))
+  .filter(post => post.matchCount > 0)
+  .sort((a, b) => b.matchCount - a.matchCount)
+  .slice(0, 5);
+---
+{related.length > 0 && (
+  <div class="related-posts">
+    <h3>Related Posts</h3>
+    <ul>
+      {related.map(post => (
+        <li>
+          <a href={`/${post.id.replace(/\.md$/, '')}/`}>{post.data.title}</a>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}

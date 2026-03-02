@@ -1,0 +1,31 @@
+---
+const title = 'Publishing and Distributing Your Android Application';
+const description = 'You created a brand new Android application, but so far it only has one user: you. This course will teach you all that you need to know about the publishing and distributing process so that you can share your amazing app with the world.';
+const image = 'https://pluralsight.imgix.net/course-images/publishing-distributing-android-application-v1.png';
+const redirectUrl = 'https://pluralsight.pxf.io/jAq76';
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting...</title>
+  <meta property="twitter:card" content="summary_large_image"/>
+  <meta property="twitter:title" content={title}/>
+  <meta property="twitter:description" content={description}/>
+  <meta property="twitter:url" content={redirectUrl}/>
+  <meta property="twitter:image:src" content={image}/>
+  <meta property="og:title" content={title} />
+  <meta property="og:url" content={redirectUrl} />
+  <meta property="og:image" content={image} />
+  <meta property="og:description" content={description} />
+  <link rel="canonical" href={redirectUrl}/>
+  <noscript>
+    <meta http-equiv="refresh" content={`0;url=${redirectUrl}`} />
+  </noscript>
+</head>
+<body>
+  <script is:inline define:vars={{ redirectUrl }}>
+    window.opener = null;
+    location.replace(redirectUrl);
+  </script>
+</body>
+</html>

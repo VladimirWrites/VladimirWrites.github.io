@@ -1,0 +1,237 @@
+/* ================================================
+   Post Header
+   ================================================ */
+
+.post-header {
+  margin-bottom: var(--space-2xl);
+}
+
+.title-image {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.post-header-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  margin-bottom: var(--space-lg);
+}
+
+.post-header h1 {
+  font-size: clamp(1.75rem, 4vw, var(--text-3xl));
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: var(--space-md);
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+.post-meta .separator {
+  color: var(--border);
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+/* ================================================
+   Post Content
+   ================================================ */
+
+.post-content {
+  font-size: var(--text-base);
+  line-height: 1.8;
+}
+
+.post-content > * + * {
+  margin-top: var(--space-md);
+}
+
+.post-content h2 {
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-md);
+  font-size: var(--text-xl);
+}
+
+.post-content h3 {
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-md);
+}
+
+.post-content img {
+  border-radius: var(--radius-md);
+  margin: var(--space-md) auto;
+}
+
+.post-content a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--accent-subtle);
+}
+.post-content a:hover {
+  text-decoration-color: var(--accent);
+}
+
+/* ================================================
+   Breaker — Section Divider
+   ================================================ */
+
+.breaker,
+div.breaker {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: var(--space-2xl) 0;
+  display: block;
+}
+
+/* ================================================
+   Bigger Image — Bleeds outside content
+   ================================================ */
+
+.bigger-image {
+  width: calc(100% + 4rem);
+  max-width: none;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  border-radius: var(--radius-lg);
+}
+
+@media (max-width: 640px) {
+  .bigger-image {
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
+    margin-right: -1rem;
+    border-radius: var(--radius-md);
+  }
+}
+
+/* ================================================
+   Side by Side — Two column layout
+   ================================================ */
+
+.side-by-side {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  margin: var(--space-xl) 0;
+}
+
+@media (max-width: 640px) {
+  .side-by-side { grid-template-columns: 1fr; }
+}
+
+.toleft, .toright { overflow: hidden; }
+.toleft img, .toright img {
+  width: 100%;
+  border-radius: var(--radius-md);
+}
+
+/* ================================================
+   Evidence — Green highlight
+   ================================================ */
+
+.evidence {
+  background: rgba(34, 197, 94, 0.1);
+  padding: 0.1em 0.3em;
+  border-radius: var(--radius-sm);
+}
+
+[data-theme="dark"] .evidence {
+  background: rgba(34, 197, 94, 0.15);
+}
+
+/* ================================================
+   Spoiler — Hover reveal
+   ================================================ */
+
+.spoiler {
+  color: transparent;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  padding: 0.1em 0.3em;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.spoiler:hover,
+.spoiler:focus {
+  color: var(--text);
+  background: transparent;
+}
+
+/* ================================================
+   Star — Inline highlight
+   ================================================ */
+
+.star {
+  background: rgba(250, 204, 21, 0.15);
+  padding: 0.1em 0.3em;
+  border-radius: var(--radius-sm);
+}
+
+[data-theme="dark"] .star {
+  background: rgba(250, 204, 21, 0.1);
+}
+
+/* ================================================
+   Responsive Iframes
+   ================================================ */
+
+.post-content iframe {
+  max-width: 100%;
+  border: 0;
+}
+
+.post-content p:has(> iframe) {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+.post-content p:has(> iframe) iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-md);
+}
+
+/* ================================================
+   Video
+   ================================================ */
+
+.post-content video {
+  max-width: 100%;
+  border-radius: var(--radius-md);
+}
+
+/* ================================================
+   Gist Embeds
+   ================================================ */
+
+.post-content .gist {
+  margin: var(--space-xl) 0;
+}
+
+.post-content .gist .gist-file {
+  border-radius: var(--radius-md) !important;
+  border-color: var(--border) !important;
+}
+
+.post-content .gist .gist-data {
+  border-radius: var(--radius-md) var(--radius-md) 0 0 !important;
+}
+
+.post-content .gist .gist-meta {
+  border-radius: 0 0 var(--radius-md) var(--radius-md) !important;
+}

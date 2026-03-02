@@ -1,0 +1,22 @@
+---
+title: "InitConf 2019: Rewrite or Refactor That Is the Question"
+date: 2019-11-02 12:01
+tag:
+- talk
+- initconf
+headerImage: true
+image: /projects/icon_initconf.png
+hidden: true
+description: "Recording of the talk given at InitConf 2019"
+author: vladimirjovanovic
+externalLink: false
+---
+<p style="text-align: center">
+	<iframe width="810" height="445"  src="https://www.youtube.com/embed/FnVvvziDYnE" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+</p>
+
+<div class="breaker"></div>
+
+<p style="text-align: center">
+	<iframe src="//www.slideshare.net/slideshow/embed_code/key/4Ho1wMSdh6TdF3" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen></iframe>
+</p>

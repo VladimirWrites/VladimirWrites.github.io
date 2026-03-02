@@ -1,0 +1,25 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  date: Date;
+  slug: string;
+  image?: string;
+}
+
+const { title, description, date, slug, image } = Astro.props;
+
+const formattedDate = date.toLocaleDateString('en-US', {
+  month: 'short',
+  day: 'numeric',
+  year: 'numeric',
+});
+---
+<a href={`/${slug}/`} class:list={['blog-post-item', { 'has-logo': !!image }]}>
+  {image && <img class="post-logo" src={image} alt="" loading="lazy" />}
+  <div class="post-item-content">
+    <h3>{title}</h3>
+    {description && <p class="post-description">{description}</p>}
+    <time datetime={date.toISOString()}>{formattedDate}</time>
+  </div>
+</a>

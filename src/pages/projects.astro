@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '../layouts/PageLayout.astro';
+import BlogPostItem from '../components/BlogPostItem.astro';
+
+const projects = (await getCollection('projects'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<PageLayout title="Projects" currentPage="Projects" description="Projects by Vladimir Jovanović">
+  <h1 class="page-title">Projects</h1>
+  <div class="post-list">
+    {projects.map(project => (
+      <BlogPostItem
+        title={project.data.title}
+        description={project.data.description}
+        date={project.data.date}
+        slug={project.id.replace(/\.md$/, '')}
+        image={project.data.image}
+      />
+    ))}
+  </div>
+</PageLayout>

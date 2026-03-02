@@ -1,0 +1,31 @@
+---
+const title = 'Firebase on Android: Remote Config and A/B Testing';
+const description = 'Firebase Remote Config has been created so that you can change your app without publishing an update. This course will teach you how to combine Firebase Remote Config with A/B testing.';
+const image = 'https://pluralsight.imgix.net/course-images/firebase-android-remote-config-ab-testing-v1.png';
+const redirectUrl = 'https://pluralsight.pxf.io/xgdk1';
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting...</title>
+  <meta property="twitter:card" content="summary_large_image"/>
+  <meta property="twitter:title" content={title}/>
+  <meta property="twitter:description" content={description}/>
+  <meta property="twitter:url" content={redirectUrl}/>
+  <meta property="twitter:image:src" content={image}/>
+  <meta property="og:title" content={title} />
+  <meta property="og:url" content={redirectUrl} />
+  <meta property="og:image" content={image} />
+  <meta property="og:description" content={description} />
+  <link rel="canonical" href={redirectUrl}/>
+  <noscript>
+    <meta http-equiv="refresh" content={`0;url=${redirectUrl}`} />
+  </noscript>
+</head>
+<body>
+  <script is:inline define:vars={{ redirectUrl }}>
+    window.opener = null;
+    location.replace(redirectUrl);
+  </script>
+</body>
+</html>
