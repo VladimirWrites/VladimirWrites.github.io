@@ -1,0 +1,23 @@
+---
+const experience = [
+  { period: 'Apr 2025 - Present', role: 'Senior Android Engineer', company: 'Grammarly', url: 'https://grammarly.com' },
+  { period: 'Mar 2025 - Present', role: 'Author', company: 'LinkedIn Learning', url: 'https://www.linkedin.com/learning/' },
+  { period: 'Jan 2022 - Feb 2025', role: 'Senior Android Engineer', company: 'TIDAL (Block Inc.)', url: 'https://tidal.com/' },
+  { period: 'Oct 2018 - Present', role: 'Author', company: 'Pluralsight, Inc.', url: 'https://www.pluralsight.com' },
+  { period: 'Sep 2017 - Jan 2022', role: 'Senior Android Engineer', company: 'FlixBus GmbH', url: 'https://www.flixbus.com' },
+  { period: 'Aug 2015 - Aug 2017', role: 'Android Developer', company: 'HolidayPirates GmbH', url: 'https://www.holidaypirates.com' },
+  { period: 'Jan 2015 - Jul 2015', role: 'Junior Data Analyst', company: 'Bravo Studio d.o.o.', url: 'https://www.bravosystems.com' },
+  { period: 'May 2013 - Jan 2015', role: 'Junior Mobile Developer', company: 'Asseco SEE', url: 'https://see.asseco.com' },
+];
+---
+<div class="timeline">
+  {experience.map(job => (
+    <div class="timeline-item">
+      <p class="timeline-date">{job.period}</p>
+      <p class="timeline-role">{job.role}</p>
+      <p class="timeline-company">
+        <a href={job.url} target="_blank" rel="noopener noreferrer">{job.company}</a>
+      </p>
+    </div>
+  ))}
+</div>

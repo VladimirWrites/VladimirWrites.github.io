@@ -1,0 +1,31 @@
+---
+const title = 'Android Fundamentals: View Binding';
+const description = 'View Binding library makes binding views in your Android project easy. This course will teach you how to replace the findViewById method with View Binding and make your code safe and concise.';
+const image = 'https://pluralsight.imgix.net/course-images/android-fundamentals-view-binding-v1.png';
+const redirectUrl = 'https://pluralsight.pxf.io/2P5GD';
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting...</title>
+  <meta property="twitter:card" content="summary_large_image"/>
+  <meta property="twitter:title" content={title}/>
+  <meta property="twitter:description" content={description}/>
+  <meta property="twitter:url" content={redirectUrl}/>
+  <meta property="twitter:image:src" content={image}/>
+  <meta property="og:title" content={title} />
+  <meta property="og:url" content={redirectUrl} />
+  <meta property="og:image" content={image} />
+  <meta property="og:description" content={description} />
+  <link rel="canonical" href={redirectUrl}/>
+  <noscript>
+    <meta http-equiv="refresh" content={`0;url=${redirectUrl}`} />
+  </noscript>
+</head>
+<body>
+  <script is:inline define:vars={{ redirectUrl }}>
+    window.opener = null;
+    location.replace(redirectUrl);
+  </script>
+</body>
+</html>

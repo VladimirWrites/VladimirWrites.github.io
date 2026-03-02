@@ -1,0 +1,49 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '../layouts/PageLayout.astro';
+
+const blog = await getCollection('blog');
+const projects = await getCollection('projects');
+const talks = await getCollection('talks');
+const allPosts = [...blog, ...projects, ...talks];
+
+// Build tag -> posts map
+const tagMap = new Map<string, { title: string; slug: string; date: Date }[]>();
+for (const post of allPosts) {
+  for (const tag of post.data.tag) {
+    if (!tagMap.has(tag)) {
+      tagMap.set(tag, []);
+    }
+    tagMap.get(tag)!.push({
+      title: post.data.title,
+      slug: post.id.replace(/\.md$/, ''),
+      date: post.data.date,
+    });
+  }
+}
+
+// Sort tags alphabetically, sort posts within each tag by date desc
+const sortedTags = [...tagMap.entries()]
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([tag, posts]) => [tag, posts.sort((a, b) => b.date.valueOf() - a.date.valueOf())] as const);
+---
+<PageLayout title="Tags" currentPage="Tags" description="All tags">
+  <h2 class="page-title">Tags</h2>
+
+  <div class="tag-cloud">
+    {sortedTags.map(([tag]) => (
+      <a class="tag" href={`#${tag.toLowerCase().replace(/\s+/g, '-')}`}>{tag}</a>
+    ))}
+  </div>
+
+  {sortedTags.map(([tag, posts]) => (
+    <div class="tag-section" id={tag.toLowerCase().replace(/\s+/g, '-')}>
+      <h2>{tag}</h2>
+      <ul>
+        {posts.map(post => (
+          <li><a href={`/${post.slug}/`}>{post.title}</a></li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</PageLayout>

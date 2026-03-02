@@ -1,0 +1,56 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import SEOHead from '../components/SEOHead.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
+import '../styles/global.css';
+import '../styles/components.css';
+import '../styles/post.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  type?: string;
+}
+
+const { title, description, image, type = 'website' } = Astro.props;
+const siteTitle = 'Vladimir Jovanović';
+const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content={Astro.generator} />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
+  <link rel="icon" href="/images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-touch-icon-152x152.png" />
+
+  <link rel="alternate" type="application/rss+xml" title={siteTitle} href="/feed.xml" />
+
+  <SEOHead title={pageTitle} description={description} image={image} type={type} />
+
+  <script is:inline>
+    (function() {
+      const theme = localStorage.getItem('theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+  <ViewTransitions />
+</head>
+<body>
+  <ThemeToggle />
+  <div class="container">
+    <slot />
+  </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '../layouts/PageLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = (await getCollection('projects'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<PageLayout title="Projects" currentPage="Projects" description="Projects by Vladimir Jovanović">
+  <h2 class="page-title">Projects</h2>
+  <div class="card-grid">
+    {projects.map(project => (
+      <ProjectCard
+        title={project.data.title}
+        description={project.data.description}
+        date={project.data.date}
+        image={project.data.image}
+        slug={project.id.replace(/\.md$/, '')}
+        tags={project.data.tag}
+      />
+    ))}
+  </div>
+</PageLayout>

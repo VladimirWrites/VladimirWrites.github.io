@@ -1,0 +1,16 @@
+---
+title: "MobOS 2020: Rewrite or Refactor That Is the Question"
+date: 2020-02-21 12:01
+tag:
+- talk
+- mobos
+headerImage: true
+image: /projects/icon_romobos.jpg
+hidden: true
+description: "Talk given at MobOS 2020 conference"
+author: vladimirjovanovic
+externalLink: false
+---
+<p style="text-align: center">
+	<iframe src="//www.slideshare.net/slideshow/embed_code/key/JfrclSr6d8nzmp" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen></iframe>
+</p>

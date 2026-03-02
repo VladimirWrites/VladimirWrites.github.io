@@ -1,0 +1,24 @@
+---
+interface Props {
+  currentPage?: string;
+  variant?: 'home' | 'compact';
+}
+
+const { currentPage, variant } = Astro.props;
+
+const links = [
+  { name: 'Home', href: '/' },
+  { name: 'Blog', href: '/blog/' },
+  { name: 'Projects', href: '/projects/' },
+  { name: 'Talks', href: '/talks/' },
+  { name: 'About', href: '/about/' },
+];
+---
+<nav class:list={['site-nav', { compact: variant === 'compact' }]}>
+  {links
+    .filter(link => link.name !== currentPage)
+    .map(link => (
+      <a href={link.href}>{link.name}</a>
+    ))
+  }
+</nav>

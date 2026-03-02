@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '../layouts/PageLayout.astro';
+import TalkCard from '../components/TalkCard.astro';
+
+const talks = (await getCollection('talks'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<PageLayout title="Talks" currentPage="Talks" description="Conference talks by Vladimir Jovanović">
+  <h2 class="page-title">Talks</h2>
+  <div class="card-grid">
+    {talks.map(talk => (
+      <TalkCard
+        title={talk.data.title}
+        description={talk.data.description}
+        date={talk.data.date}
+        image={talk.data.image}
+        slug={talk.id.replace(/\.md$/, '')}
+      />
+    ))}
+  </div>
+</PageLayout>

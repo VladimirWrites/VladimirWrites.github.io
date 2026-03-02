@@ -1,0 +1,31 @@
+---
+const title = 'Improving, Testing, and Refactoring a Legacy Android App';
+const description = 'The Android platform is old enough that there is an abundance of legacy projects that someone needs to support and work on. This course will teach you the skills necessary to help companies support and improve their legacy apps.';
+const image = 'https://pluralsight.imgix.net/course-images/improving-testing-refactoring-legacy-android-app-v1.jpg';
+const redirectUrl = 'https://pluralsight.pxf.io/BXE7vL';
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting...</title>
+  <meta property="twitter:card" content="summary_large_image"/>
+  <meta property="twitter:title" content={title}/>
+  <meta property="twitter:description" content={description}/>
+  <meta property="twitter:url" content={redirectUrl}/>
+  <meta property="twitter:image:src" content={image}/>
+  <meta property="og:title" content={title} />
+  <meta property="og:url" content={redirectUrl} />
+  <meta property="og:image" content={image} />
+  <meta property="og:description" content={description} />
+  <link rel="canonical" href={redirectUrl}/>
+  <noscript>
+    <meta http-equiv="refresh" content={`0;url=${redirectUrl}`} />
+  </noscript>
+</head>
+<body>
+  <script is:inline define:vars={{ redirectUrl }}>
+    window.opener = null;
+    location.replace(redirectUrl);
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '../layouts/PageLayout.astro';
+import BlogPostItem from '../components/BlogPostItem.astro';
+
+const posts = (await getCollection('blog'))
+  .filter(post => !post.data.hidden)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<PageLayout title="Blog" currentPage="Blog" description="Blog posts by Vladimir Jovanović">
+  <h2 class="page-title">Blog</h2>
+  {posts.length === 0 ? (
+    <p style="text-align: center;">Nothing published yet!</p>
+  ) : (
+    <ul class="post-list">
+      {posts.map(post => (
+        <BlogPostItem
+          title={post.data.title}
+          date={post.data.date}
+          slug={post.id.replace(/\.md$/, '')}
+        />
+      ))}
+    </ul>
+  )}
+</PageLayout>

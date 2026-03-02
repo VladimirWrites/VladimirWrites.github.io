@@ -1,0 +1,43 @@
+---
+import { getCollection, render } from 'astro:content';
+import PostLayout from '../layouts/PostLayout.astro';
+
+export async function getStaticPaths() {
+  const blog = await getCollection('blog');
+  const projects = await getCollection('projects');
+  const talks = await getCollection('talks');
+
+  const blogPaths = blog.map(post => ({
+    params: { slug: post.id.replace(/\.md$/, '') },
+    props: { post, collection: 'blog' as const },
+  }));
+
+  const projectPaths = projects.map(post => ({
+    params: { slug: post.id.replace(/\.md$/, '') },
+    props: { post, collection: 'projects' as const },
+  }));
+
+  const talkPaths = talks.map(post => ({
+    params: { slug: post.id.replace(/\.md$/, '') },
+    props: { post, collection: 'talks' as const },
+  }));
+
+  return [...blogPaths, ...projectPaths, ...talkPaths];
+}
+
+const { post, collection } = Astro.props;
+const { Content } = await render(post);
+---
+<PostLayout
+  title={post.data.title}
+  date={post.data.date}
+  description={post.data.description}
+  tags={post.data.tag}
+  image={post.data.image}
+  headerImage={post.data.headerImage}
+  collection={collection}
+  slug={post.id}
+  body={post.body || ''}
+>
+  <Content />
+</PostLayout>

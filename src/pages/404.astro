@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+<BaseLayout title="Page Not Found">
+  <Nav variant="compact" />
+  <section class="lost-container">
+    <h1>Looks like you're lost!</h1>
+    <img src="/images/error.gif" alt="Lost" />
+    <br />
+    <a href="/">Take Me Home!</a>
+  </section>
+  <Footer />
+</BaseLayout>

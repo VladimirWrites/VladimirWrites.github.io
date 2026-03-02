@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+
+interface Props {
+  currentSlug: string;
+}
+
+const { currentSlug } = Astro.props;
+
+const blogPosts = (await getCollection('blog'))
+  .filter(post => !post.data.hidden)
+  .sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf());
+
+const currentIndex = blogPosts.findIndex(post => post.id === currentSlug);
+const prev = currentIndex > 0 ? blogPosts[currentIndex - 1] : null;
+const next = currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] : null;
+---
+{(prev || next) && (
+  <div class="post-navigation">
+    {prev ? (
+      <a class="prev" href={`/${prev.id.replace(/\.md$/, '')}/`}>{prev.data.title}</a>
+    ) : <span />}
+    {next ? (
+      <a class="next" href={`/${next.id.replace(/\.md$/, '')}/`}>{next.data.title}</a>
+    ) : <span />}
+  </div>
+)}
