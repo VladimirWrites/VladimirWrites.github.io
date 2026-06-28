@@ -1,2 +1,36 @@
+# robots.txt for vladimirj.dev
+
+# Default: allow every crawler full access.
 User-agent: *
-Disallow:
+Allow: /
+
+# --- AI answer / search assistants (explicitly welcomed) --------------------
+# These fetch pages to answer user questions and cite sources. Always allowed.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# --- AI training crawlers ---------------------------------------------------
+# TRAINING-BOT TOGGLE. Default policy below is ALLOW (each rule is "Allow: /").
+# To opt OUT of AI training, change every "Allow: /" in this block to
+# "Disallow: /". This is the single switch for training-oriented bots.
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# --- Discovery --------------------------------------------------------------
+Sitemap: https://vladimirj.dev/sitemap-index.xml
+Sitemap: https://vladimirj.dev/feed.xml
