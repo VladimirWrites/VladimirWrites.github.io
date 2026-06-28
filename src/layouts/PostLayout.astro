@@ -5,6 +5,7 @@ import ReadTime from '../components/ReadTime.astro';
 import PostNavigation from '../components/PostNavigation.astro';
 import RelatedPosts from '../components/RelatedPosts.astro';
 import AuthorBio from '../components/AuthorBio.astro';
+import { entrySchema } from '../data/schema';
 
 interface Props {
   title: string;
@@ -25,8 +26,11 @@ const formattedDate = date.toLocaleDateString('en-US', {
   month: 'long',
   day: 'numeric',
 });
+
+const cleanSlug = slug.replace(/\.md$/, '');
+const pageSchema = entrySchema({ collection, title, date, description, tags, image, slug: cleanSlug, body });
 ---
-<BaseLayout title={title} description={description} image={image} type="article">
+<BaseLayout title={title} description={description} image={image} type="article" jsonLd={[pageSchema]}>
   <article>
     <div class="post-header">
       {headerImage && image && collection === 'blog' && (
