@@ -1,8 +1,10 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
 import SEOHead from '../components/SEOHead.astro';
+import JsonLd from '../components/JsonLd.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import { personSchema } from '../data/person';
 import '../styles/global.css';
 import '../styles/components.css';
 import '../styles/post.css';
@@ -13,11 +15,16 @@ interface Props {
   image?: string;
   type?: string;
   currentPage?: string;
+  jsonLd?: Record<string, unknown>[];
 }
 
-const { title, description, image, type = 'website', currentPage } = Astro.props;
+const { title, description, image, type = 'website', currentPage, jsonLd = [] } = Astro.props;
 const siteTitle = 'Vladimir Jovanović';
 const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+
+// Person node is emitted site-wide for entity disambiguation; pages may append
+// their own nodes (BlogPosting, Event, CreativeWork) which reference it by @id.
+const schemaNodes = [personSchema, ...jsonLd];
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -38,6 +45,8 @@ const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
   <link rel="alternate" type="application/rss+xml" title={siteTitle} href="/feed.xml" />
 
   <SEOHead title={pageTitle} description={description} image={image} type={type} />
+
+  <JsonLd schema={schemaNodes} />
 
   <script is:inline>
     function getTheme() {

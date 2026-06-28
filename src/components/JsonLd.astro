@@ -1,0 +1,15 @@
+---
+// Renders one or more schema.org nodes as a single JSON-LD graph.
+// Pass a single object or an array of nodes.
+interface Props {
+  schema: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const { schema } = Astro.props;
+const nodes = Array.isArray(schema) ? schema : [schema];
+const graph = {
+  '@context': 'https://schema.org',
+  '@graph': nodes,
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(graph)} is:inline />
