@@ -4,6 +4,7 @@ import SEOHead from '../components/SEOHead.astro';
 import JsonLd from '../components/JsonLd.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import KonamiEasterEgg from '../components/KonamiEasterEgg.astro';
 import { personSchema } from '../data/person';
 import '../styles/global.css';
 import '../styles/components.css';
@@ -68,5 +69,16 @@ const schemaNodes = [personSchema, ...jsonLd];
     <slot />
   </div>
   <Footer />
+  <KonamiEasterEgg />
+
+  <script is:inline>
+    // Easter egg for the curious who open DevTools.
+    (function () {
+      if (window.__vjHi) return;
+      window.__vjHi = true;
+      var hint = 'color:#f59e0b;font:600 13px/1.6 Inter,system-ui,sans-serif;';
+      console.log('%cPsst: try the Konami code', hint);
+    })();
+  </script>
 </body>
 </html>
