@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import PostLayout from '../layouts/PostLayout.astro';
+import { entrySchema } from '../data/schema';
 
 export async function getStaticPaths() {
   const blog = await getCollection('blog');
@@ -27,6 +28,22 @@ export async function getStaticPaths() {
 
 const { post, collection } = Astro.props;
 const { Content } = await render(post);
+
+const d = post.data as Record<string, any>;
+const pageSchema = entrySchema({
+  collection,
+  title: d.title,
+  date: d.date,
+  description: d.description,
+  tags: d.tag,
+  image: d.image,
+  slug: post.id.replace(/\.md$/, ''),
+  body: post.body || '',
+  venue: d.venue,
+  venueStreet: d.venueStreet,
+  venueLocality: d.venueLocality,
+  venueCountry: d.venueCountry,
+});
 ---
 <PostLayout
   title={post.data.title}
@@ -38,6 +55,7 @@ const { Content } = await render(post);
   collection={collection}
   slug={post.id}
   body={post.body || ''}
+  jsonLd={[pageSchema]}
 >
   <Content />
 </PostLayout>

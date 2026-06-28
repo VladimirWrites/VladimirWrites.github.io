@@ -11,6 +11,10 @@ hidden: true
 description: "Talk given at Droidcon Berlin 2025 conference"
 author: vladimirjovanovic
 externalLink: false
+venue: "CityCube Berlin"
+venueStreet: "Messedamm 26"
+venueLocality: "Berlin"
+venueCountry: "Germany"
 ---
 <p style="text-align: center">
 	<iframe width="810" height="445"  src="https://www.youtube.com/embed/IRPr7YVH07o" frameborder="0" allowfullscreen="allowfullscreen"></iframe>

@@ -42,6 +42,12 @@ const talks = defineCollection({
     hidden: z.boolean().default(true),
     externalLink: z.union([z.string(), z.boolean()]).default(false),
     author: z.string().default('vladimirjovanovic'),
+    // Optional physical venue for in-person talks, used to emit a precise
+    // schema.org Event/Place. Omit for online or unknown-venue talks.
+    venue: z.string().optional(),
+    venueStreet: z.string().optional(),
+    venueLocality: z.string().optional(),
+    venueCountry: z.string().optional(),
   }),
 });
 

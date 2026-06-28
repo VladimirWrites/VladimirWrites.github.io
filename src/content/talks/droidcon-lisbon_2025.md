@@ -11,5 +11,9 @@ hidden: true
 description: "Talk given at Droidcon Lisbon 2025 conference"
 author: vladimirjovanovic
 externalLink: false
+venue: "Fórum Cultural de Alcochete"
+venueStreet: "Praça da Cultura 87"
+venueLocality: "Alcochete"
+venueCountry: "Portugal"
 ---
 <img class="bigger-image" src="/projects/droidcon-lisbon-2025.jpg" alt="Header" />

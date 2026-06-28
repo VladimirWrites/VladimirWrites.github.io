@@ -36,6 +36,11 @@ interface EntryInput {
   image?: string;
   slug: string;
   body: string;
+  // Optional explicit talk venue (frontmatter); preferred over the city-tag map.
+  venue?: string;
+  venueStreet?: string;
+  venueLocality?: string;
+  venueCountry?: string;
 }
 
 function blogPosting(e: EntryInput): Record<string, unknown> {
@@ -63,9 +68,26 @@ function talkNode(e: EntryInput): Record<string, unknown> {
   const cityKey = tags.find((t) => CITIES[t.toLowerCase()]);
   const url = postUrl(e.slug);
 
-  // Event when a real venue (city) is derivable, else CreativeWork.
-  if (cityKey) {
-    const place = CITIES[cityKey.toLowerCase()];
+  // Build a Place from an explicit frontmatter venue, or fall back to the
+  // city-tag map. Either yields an Event; with neither, fall through to
+  // CreativeWork below.
+  let place: Record<string, unknown> | undefined;
+  if (e.venue) {
+    const address: Record<string, unknown> = { '@type': 'PostalAddress' };
+    if (e.venueStreet) address.streetAddress = e.venueStreet;
+    if (e.venueLocality) address.addressLocality = e.venueLocality;
+    if (e.venueCountry) address.addressCountry = e.venueCountry;
+    place = { '@type': 'Place', name: e.venue, address };
+  } else if (cityKey) {
+    const c = CITIES[cityKey.toLowerCase()];
+    place = {
+      '@type': 'Place',
+      name: c.city,
+      address: { '@type': 'PostalAddress', addressLocality: c.city, addressCountry: c.country },
+    };
+  }
+
+  if (place) {
     return {
       '@type': 'Event',
       name: e.title,
@@ -73,11 +95,7 @@ function talkNode(e: EntryInput): Record<string, unknown> {
       startDate: e.date.toISOString(),
       eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
       eventStatus: 'https://schema.org/EventScheduled',
-      location: {
-        '@type': 'Place',
-        name: place.city,
-        address: { '@type': 'PostalAddress', addressLocality: place.city, addressCountry: place.country },
-      },
+      location: place,
       performer: authorRef,
       organizer: authorRef,
       url,

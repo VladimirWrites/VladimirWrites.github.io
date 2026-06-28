@@ -11,6 +11,10 @@ hidden: true
 description: "Talk given at Droidcon London 2025 conference"
 author: vladimirjovanovic
 externalLink: false
+venue: "Business Design Centre"
+venueStreet: "52 Upper Street"
+venueLocality: "London"
+venueCountry: "United Kingdom"
 ---
 <p style="text-align: center">
 	<iframe width="810" height="445"  src="https://www.youtube.com/embed/CHRgrgCLaOE" frameborder="0" allowfullscreen="allowfullscreen"></iframe>

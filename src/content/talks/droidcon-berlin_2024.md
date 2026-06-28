@@ -11,6 +11,10 @@ hidden: true
 description: "Talk given at Droidcon Berlin 2024 conference"
 author: vladimirjovanovic
 externalLink: false
+venue: "CityCube Berlin"
+venueStreet: "Messedamm 26"
+venueLocality: "Berlin"
+venueCountry: "Germany"
 ---
 <p style="text-align: center">
 	<iframe width="810" height="445"  src="https://player.vimeo.com/video/995355614?autopause=0&amp;autoplay=0&amp;color=00adef&amp;portrait=0&amp;byline=0&amp;title=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
