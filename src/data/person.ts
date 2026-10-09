@@ -33,7 +33,7 @@ export const person = {
   url: SITE_URL,
   image: `${SITE_URL}/images/vladimir-jovanovic.jpg`,
   email,
-  worksFor: { name: 'Grammarly', url: 'https://grammarly.com' },
+  worksFor: { name: 'Superhuman (Grammarly)', url: 'https://superhuman.com' },
   knowsAbout: [
     'Android Development',
     'Java',
